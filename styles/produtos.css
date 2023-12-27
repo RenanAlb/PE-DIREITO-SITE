@@ -1,0 +1,128 @@
+.style-header {
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 670px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 40px;
+}
+.style-header .title-page {
+  margin-top: 300px;
+  text-align: center;
+}
+
+
+.print-produtos {
+  margin: 120px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.produto {
+  border: 1px solid rgb(237, 237, 237);
+  padding: 38.9px;
+}
+.produto p {
+  margin: 5px 0px;
+  font-size: 1.2em;
+}
+
+
+@media screen and (min-width: 1537px) {
+  .produto {
+    width: 25%;
+  }
+}
+
+.bk-img-produto-0,
+.bk-img-produto-1,
+.bk-img-produto-2,
+.bk-img-produto-3,
+.bk-img-produto-4,
+.bk-img-produto-5,
+.bk-img-produto-6,
+.bk-img-produto-7,
+.bk-img-produto-8,
+.bk-img-produto-9,
+.bk-img-produto-10,
+.bk-img-produto-11,
+.bk-img-produto-12,
+.bk-img-produto-13,
+.bk-img-produto-14,
+.bk-img-produto-15,
+.bk-img-produto-16,
+.bk-img-produto-17,
+.bk-img-produto-18,
+.bk-img-produto-19,
+.bk-img-produto-20 {
+  background-size: cover;
+  background-position: center center;
+  width: 300px;
+  height: 400px;
+  margin: auto;
+}
+
+.carrinho-produto {
+  margin-bottom: 5px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin: 0px 0px 10px 0px;
+}
+.carrinho-produto:hover {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.comprar-produto {
+  background-color: rgba(255, 222, 58, 0.594);
+  padding: 10px 20px;
+  border: none;
+  border: 1px solid transparent;
+}
+.comprar-produto:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+
+@media screen and (max-width: 775px) {
+  .produto {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bk-img-produto-0,
+  .bk-img-produto-1,
+  .bk-img-produto-2,
+  .bk-img-produto-3,
+  .bk-img-produto-4,
+  .bk-img-produto-5,
+  .bk-img-produto-6,
+  .bk-img-produto-7,
+  .bk-img-produto-8,
+  .bk-img-produto-9,
+  .bk-img-produto-10,
+  .bk-img-produto-11,
+  .bk-img-produto-12,
+  .bk-img-produto-13,
+  .bk-img-produto-14,
+  .bk-img-produto-15,
+  .bk-img-produto-16,
+  .bk-img-produto-17,
+  .bk-img-produto-18,
+  .bk-img-produto-19,
+  .bk-img-produto-20 {
+    background-size: cover;
+    background-position: center center;
+    width: 190px;
+    height: 250px;
+    margin: auto;
+  }
+}

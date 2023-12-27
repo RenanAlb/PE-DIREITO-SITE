@@ -1,0 +1,331 @@
+@font-face {
+  font-family: 'Kiona';
+  src: url('kiona_2/Kiona-Regular.ttf') format('truetype');
+}
+
+.pauseScroll {
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kiona', sans-serif;
+}
+.nav-bar {
+  padding: 140px 60px;
+  background-color: white;
+  width: 135%;
+  left: -30px;
+  right: -30px;
+  top: -30px;
+  height: 120vh;
+  position: absolute;
+  display: none;
+}
+.nav-bar section {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: end;
+  position: absolute;
+  top: 90px;
+}
+.nav-bar ul {
+  display: flex;
+  flex-direction: column;
+}
+.nav-bar ul li {
+  display: inline-block;
+  margin: 6px 0px;
+}
+.nav-bar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 2.3em;
+}
+.nav-bar ul li a:hover {
+  border-bottom: 1px solid black;
+}
+
+.container-menu-links {
+  display: flex;
+  z-index: 1;
+  align-items: center;
+}
+
+.contate-nos a {
+  text-decoration: none;
+  color: black;
+}
+.contate-nos a:hover {
+  border-bottom: 1px solid black;
+}
+
+.menu {
+  background-color: rgb(255, 255, 255);
+  padding: 3px 10px;
+  height: 50px;
+  display: flex;
+  border-radius: 70px;
+  align-items: center;
+}
+.menu .material-symbols-outlined {
+  color: rgb(0, 0, 0);
+  margin: -2px 2px 0px 2px;
+  font-size: 1.3em;
+}
+.menu .material-symbols-outlined:hover {cursor: pointer;}
+.menu .style-menu:hover {cursor: pointer;}
+.menu .style-menu span {
+  width: 30px;
+  height: 0.1px;
+  background-color: rgb(0, 0, 0);
+  display: block;
+  margin-bottom: 6px;
+  z-index: 2;
+}
+.style-menu {
+  height: 15px;
+  padding: 4px;
+  margin: 0px 0px 0px 20px;
+  z-index: 1;
+}
+
+.div-contate {
+  position: fixed;
+  top: 62px;
+  width: 200px;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: none;
+  padding: 30px;
+}
+.div-contate ul {
+  display: flex;
+  flex-direction: column;
+}
+.div-contate ul li {
+  margin: 10px 0px;
+  display: inline-block;
+}
+.div-contate ul li a {
+  text-decoration: none;
+  color: black;
+}
+.div-contate ul li a:hover {
+  border-bottom: 1px solid black;
+}
+
+
+.div-pesquisa {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 10px rgba(51, 51, 51, 0.265);
+  position: fixed;
+  top: 67px;
+  display: none;
+  right: 120px;
+  width: 600px;
+  padding: 20px;
+}
+.div-pesquisa p {
+  margin: 30px 0px;
+  font-weight: bolder;
+}
+.div-pesquisa ul li {
+  display: inline-block;
+  margin: 5px 0px;
+}
+.div-pesquisa ul li a {
+  padding: 5px 0px;
+  color: rgb(105, 105, 105);
+}
+.div-pesquisa ul li a:hover {
+  color: black;
+}
+.div-pesquisa ul {
+  display: flex;
+  flex-direction: column;
+}
+.div-pesquisa div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.div-pesquisa div input {
+  width: 400px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+.div-pesquisa div button {
+  background-color: black;
+  font-weight: 800;
+  margin: 10px 0px;
+  border: none;
+  color: white;
+  padding: 5px;
+  border: 1px solid black;
+}
+.div-pesquisa div button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 858px) {
+  .div-pesquisa {
+    background-color: rgb(255,255, 255);
+    box-shadow: 0px 10px 10px rgba(51, 51, 51, 0.265);
+    position: fixed;
+    top: 62px;
+    display: none;
+    right: 0px;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .nav-bar section ul li a {
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 360px) {
+  .nav-bar section ul li a {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 330px) {
+  .menu .container-menu-links span {
+    zoom: 80%;
+  }
+  .ball {
+    position: absolute;
+    top: 22px;
+    left: calc(100% - 100px);
+  }
+}
+@media screen and (max-width: 470px) {
+  .contate-nos {
+    display: none;
+  }
+  .ball {
+    right: 77px;
+  }
+}
+
+.link-li {
+  border: 1px solid transparent;
+  margin: 6px 0px;
+}
+.link-li:hover {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+
+.title-page {
+  color: white;
+  font-size: 4em;
+}
+
+footer {
+  padding: 60px 30px;
+  background-color: black;
+  text-align: center;
+}
+footer p {
+  color: white;
+  margin: 50px 0px;
+}
+footer p a {
+  color: rgb(250, 210, 124);
+}
+footer p a:hover {
+  color: white;
+}
+footer .img-footer {
+  text-align: center;
+}
+footer .img-footer img {
+  width: 50%;
+}
+.container-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 60px 30px;
+}
+.contato-footer {
+  margin: 20px 0px;
+}
+.contato-footer h1 {
+  color: white;
+  padding: 10px;
+}
+.contato-footer ul li {
+  display: inline-block;
+  margin: 5px 0px;
+}
+.contato-footer ul {
+  display: flex;
+  flex-direction: column;
+}
+.contato-footer ul li a {
+  text-decoration: none;
+  color: rgb(207, 207, 207);
+  padding: 10px;
+}
+.contato-footer ul li a:hover {
+  color: white;
+}
+.sobre {
+  margin: 20px;
+}
+.sobre h1 {
+  color: white;
+  padding: 10px;
+}
+.sobre ul li {
+  display: inline-block;
+  margin: 5px 0px;
+}
+.sobre ul {
+  display: flex;
+  flex-direction: column;
+}
+.sobre ul li a {
+  text-decoration: none;
+  color: rgb(207, 207, 207);
+  padding: 10px;
+}
+.sobre ul li a:hover {
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .contato-footer ul li a {
+    text-decoration: none;
+    color: rgb(207, 207, 207);
+    padding: 10px;
+    font-size: 0.7em;
+  }
+  .sobre ul li a {
+    text-decoration: none;
+    color: rgb(207, 207, 207);
+    padding: 10px;
+    font-size: 0.7em;
+  }
+  .sobre h1 {
+    font-size: 1.2em;
+  }
+  .contato-footer h1 {
+    font-size: 1.2em;
+  }
+}
+
+.message {
+  text-align: center;
+  margin: 90px;
+}
