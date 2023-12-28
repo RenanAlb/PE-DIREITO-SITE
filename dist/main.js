@@ -15,6 +15,7 @@ carrinhoEl.classList.add('carrinho');
 const produtosAddCarrinho = [];
 const produtosAddCompras = [];
 const main = document.getElementById('content');
+const ballRed = document.createElement('div');
 const divPesquisa = document.createElement('div');
 const linkContato = document.querySelector('.contate-nos a');
 const div = document.createElement('div');
@@ -26,7 +27,7 @@ function controlesMenu() {
       <input type="text" id="pesq" placeholder="O que você está procurando?">
       <button class="btn-pesq">PROCURAR</button>
     </div>
-    <p class="aviso">PESQUISAS COMUNS</p>
+    <p class="aviso"></p>
     <ul class="list">
     </ul>
   `;
@@ -79,7 +80,7 @@ function controlesMenu() {
     searchInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
             console.log(searchInput.value);
-            resultadoSuggestionsPage(searchInput.value);
+            resultadoSuggestionsPage(searchInput.value.toLocaleLowerCase());
             divPesquisa.style.display = 'none';
             searchInput.value = '';
         }
@@ -87,7 +88,7 @@ function controlesMenu() {
     btn.addEventListener('click', () => {
         console.log(searchInput.value);
         divPesquisa.style.display = 'none';
-        resultadoSuggestionsPage(searchInput.value);
+        resultadoSuggestionsPage(searchInput.value.toLocaleLowerCase());
         searchInput.value = '';
     });
     function resultadoSuggestionsPage(res) {
@@ -100,27 +101,11 @@ function controlesMenu() {
         const printProdutos = document.createElement('div');
         printProdutos.classList.add('print-produtos');
         if (array.length === 0) {
-            main.innerHTML = '<p class="message">NENHUM RESULTAO FOI ENCONTRADO :(</p>';
+            main.innerHTML = '<p class="message">NENHUM RESULTAdO FOI ENCONTRADO :(</p>';
         }
         else {
             main.innerHTML = '<p class="message">RESULTADOS ENCONTRADOS</p>';
         }
-        // const print = array.map(index => {
-        //   printProdutos.innerHTML += `
-        //   <div class="produto">
-        //     <div class="bk-img-produto-${index.id}"></div>
-        //     <div class="desc-produto">
-        //       <p>${index.nome}</p>
-        //       <p>R$${index.custo.toFixed(2).replace('.',',')}</p>
-        //       <button class="carrinho-produto" data-type="${index.tipo}" id="${index.id}">
-        //         Adicionar ao carrinho
-        //       </button><br>
-        //       <button class="comprar-produto" id="${index.id}">
-        //         Comprar agoravestido
-        //       </button>
-        //     </div>
-        //   </div> `
-        // })
         for (let i = 0; i < array.length; i++) {
             printProdutos.innerHTML += `
       <div class="produto">
@@ -272,21 +257,61 @@ function loadPageFirst() {
     </div>
   `;
     main.innerHTML = `
-    <h2 class="title">NOVOS LOOKS</h2>
     <div class="part1-index">
-      <img src="${conteudo.imgLook1}" alt="look">
-      <img src="${conteudo.imgLook2}" alt="look">
-      <img src="${conteudo.imgLook3}" alt="look">
+      <div class="display-img"></div>
+      <div class="display-text">
+        <p>LOOKS INCRÍVEIS E VIBRANTES PARA VOCÊ</p>
+        <button class="view-look">VER LOOKS</button>
+      </div>
     </div>
     <div class="part2-index">
-      <section>
-        <h1>${conteudo.text}</h1>
-      </section>
-      <img src="${conteudo.imgBolsa}" alt="">
+      <div class="produtos-exibir">
+        <section class="style-produto" id="15">
+          <div class="img-bk1-p2"></div>
+          <div class="sobre-style-produto">
+            <p>BOLSA TAL</p>
+            <p>R$ 300,00</p>
+          </div>
+        </section>
+        <section class="style-produto" id="16">
+          <div class="img-bk2-p2"></div>
+          <div class="sobre-style-produto">
+            <p>BOLSA TAL</p>
+            <p>R$ 300,00</p>
+          </div>
+        </section>
+        <section class="style-produto" id="5">
+          <div class="img-bk3-p2"></div>
+          <div class="sobre-style-produto">
+            <p>BOLSA TAL</p>
+            <p>R$ 300,00</p>
+          </div>
+        </section>
+        <section class="style-produto" id="11">
+          <div class="img-bk4-p2"></div>
+          <div class="sobre-style-produto">
+            <p>BOLSA TAL</p>
+            <p>R$ 300,00</p>
+          </div>
+        </section>
+      </div>
     </div>
   `;
 }
 loadPageFirst();
+const viewLook = document.querySelector('.view-look');
+viewLook.addEventListener('click', roupasMain);
+const divStyleProduto = document.createElement('div');
+divStyleProduto.classList.add('style-produto-div-absolute');
+function clickStyleProduto() {
+    const produtosClicados = document.querySelectorAll('.style-produto');
+    produtosClicados.forEach(produto => {
+        produto.addEventListener('click', () => {
+            bolsasMain();
+        });
+    });
+}
+clickStyleProduto();
 function controleMain(typePage) {
     styleHeader.innerHTML = '';
     styleHeader.style.backgroundImage = '';
@@ -314,6 +339,7 @@ function homeMain() {
 }
 //// ROUPAS MAIN
 function roupasMain() {
+    main.innerHTML = '';
     styleHeader.style.display = 'block';
     header.style.height = '670px';
     styleHeader.style.backgroundImage = "url('img/roupa-bk.jpg')";
@@ -330,9 +356,6 @@ function roupasMain() {
           <button class="carrinho-produto" data-type="${roupas_produtos.roupas[i].tipo}" id="${i}">
             Adicionar ao carrinho
           </button><br>
-          <button class="comprar-produto" id="${roupas_produtos.roupas[i].id}">
-            Comprar agora
-          </button>
         </div>
       </div>
     `;
@@ -344,6 +367,7 @@ function roupasMain() {
 }
 //// BOLSAS MAIN
 function bolsasMain() {
+    main.innerHTML = '';
     styleHeader.style.display = 'block';
     header.style.height = '670px';
     styleHeader.style.backgroundImage = 'url(img/bolsa-bk.jpg)';
@@ -360,9 +384,6 @@ function bolsasMain() {
           <button class="carrinho-produto" data-type="${bolsas_produtos.bolsas[i].tipo}" id="${i}">
             Adicionar ao carrinho
           </button><br>
-          <button class="comprar-produto" id="${bolsas_produtos.bolsas[i].id}">
-            Comprar agora
-          </button>
         </div>
       </div>
     `;
@@ -389,9 +410,6 @@ function calcadosMain() {
           <button class="carrinho-produto" data-type="${calcados_produtos.calcados[i].tipo}" id="${i}">
             Adicionar ao carrinho
           </button><br>
-          <button class="comprar-produto" id="${calcados_produtos.calcados[i].id}">
-            Comprar agora
-          </button>
         </div>
       </div>
     `;
@@ -403,6 +421,7 @@ function calcadosMain() {
 }
 function carrinho() {
     const btnAddCarrinho = document.querySelectorAll('.carrinho-produto');
+    console.log(btnAddCarrinho);
     btnAddCarrinho.forEach(btn => {
         btn.addEventListener('click', (event) => {
             event.preventDefault();
@@ -412,7 +431,6 @@ function carrinho() {
             atualizarCarrinho(Number(idProduto), String(tipo));
         });
     });
-    console.log('btns', btnAddCarrinho);
     let produtoAdicionado;
     function atualizarCarrinho(idProduto, tipo) {
         if (tipo === 'roupa') {
@@ -425,10 +443,11 @@ function carrinho() {
             produtoAdicionado = calcados_produtos.calcados[idProduto];
         }
         else {
-            alert('ERRO 89');
-            console.error('ERRO 89');
+            alert('ERRO');
+            console.error('ERRO');
         }
         const produtoExistente = produtosAddCarrinho.find(item => item.id === produtoAdicionado.id);
+        console.log(produtoExistente);
         if (!produtoExistente) {
             if (produtoAdicionado.estoque > 0) {
                 produtoAdicionado.qnt_adicionada_carrinho++;
@@ -442,7 +461,7 @@ function carrinho() {
         }
         else {
             console.log('Produto existente: ', produtoExistente);
-            if (produtoExistente.qnt_adicionada_carrinho < produtoAdicionado.estoque_fixo) { //=
+            if (produtoExistente.qnt_adicionada_carrinho < produtoAdicionado.estoque_fixo) {
                 produtoExistente.qnt_adicionada_carrinho++;
                 produtoExistente.estoque--;
                 console.log('Produto existente atualizado:', produtosAddCarrinho);
@@ -451,7 +470,6 @@ function carrinho() {
                 alert('Estoque esgotado!');
             }
         }
-        const ballRed = document.createElement('div');
         ballRed.innerHTML = `<p>${produtosAddCarrinho.length}</p>`;
         if (produtosAddCarrinho.length > 0) {
             ballRed.classList.add('ball');
@@ -462,8 +480,7 @@ function carrinho() {
         }
     }
 }
-divGlobal.appendChild(carrinhoEl);
-menu.appendChild(divGlobal);
+const pIndexContainer = [];
 shopCart.addEventListener('click', () => {
     carrinhoEl.innerHTML = '';
     if (divGlobal.style.display === 'block') {
@@ -474,29 +491,181 @@ shopCart.addEventListener('click', () => {
         divGlobal.style.display = 'block';
         div.style.display = 'none';
     }
-    console.log('1', produtosAddCarrinho);
     if (produtosAddCarrinho.length == 0) {
         carrinhoEl.innerHTML = '<p class="center-p">CARRINHO VAZIO</p>';
     }
     else {
+        carrinhoEl.innerHTML += `
+      <div class="head-carrinho">
+        <p>CARRINHO</p>
+        <p style="margin-left: 16px">QUANTIDADE</p>
+        <p>REMOVER</p>
+      </div>
+    `;
         for (let i = 0; i < produtosAddCarrinho.length; i++) {
             carrinhoEl.innerHTML += `
       <div class="produto-add-carrinho">
-        <div class="img-${i}"></div>
-        <section>
-          <p>Nome: ${produtosAddCarrinho[i].nome}</p>
-          <p>Preço: R$${produtosAddCarrinho[i].custo.toFixed(2).replace('.', ',')}</p>
-          <p>Quantidade adicionada: ${produtosAddCarrinho[i].qnt_adicionada_carrinho}</p>
-        </section>
+        <p>${produtosAddCarrinho[i].nome}</p>
+        <div class="mais-ou-menos">
+          <span id="menos" class="event-span" data-spanid="${produtosAddCarrinho[i].id}">-</span>
+          <p class="p-id" data-index="${i}" id="${produtosAddCarrinho[i].id}">1</p>
+          <span id="mais" class="event-span" data-spanid="${produtosAddCarrinho[i].id}">+</span>
+        </div>
+        <p class="custo">R$ 200,00</p>
+        <span id="remove-item" data-item="${i}" class="material-symbols-outlined">
+          close
+        </span>
       </div>
     `;
-            const img = document.querySelector(`.img-${i}`);
-            img.style.backgroundImage = `url(${produtosAddCarrinho[i].img})`;
-            img.style.width = '250px';
-            img.style.height = '350px';
-            img.style.margin = 'auto';
-            img.style.backgroundPosition = 'center center';
-            img.style.backgroundSize = 'cover';
         }
+        let incremento = 0;
+        carrinhoEl.innerHTML += `
+      <div class="total">
+        <p>TOTAL</p>
+          <p class="print-custo-total"><strong>R$ ${calcularTotalCusto().toFixed(2).replace('.', ',')}</strong></p>
+        </div>
+      <button class="checkout">CHECKOUT</button>
+    `;
+        console.log(carrinhoEl);
+        divGlobal.appendChild(carrinhoEl);
+        menu.appendChild(divGlobal);
+        const spans = document.querySelectorAll('.event-span');
+        console.log(spans);
+        spans.forEach(span => {
+            span.addEventListener('click', () => {
+                const tipoSpan = span.getAttribute('id');
+                const indexProduto = span.getAttribute('data-spanid');
+                console.log(tipoSpan, indexProduto);
+                atualizarQntSpan(String(tipoSpan), String(indexProduto));
+            });
+        });
+        function atualizarQntSpan(tipoSpan, indexProduto) {
+            const pIds = document.querySelectorAll('.p-id');
+            if (tipoSpan === 'mais') {
+                console.log('+1', pIndexContainer);
+                pIds.forEach(e => {
+                    const index = e.getAttribute('data-index');
+                    if (e.getAttribute('id') === indexProduto) {
+                        if (produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho !== produtosAddCarrinho[Number(index)].estoque_fixo) {
+                            produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho++;
+                            e.innerHTML = `${produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho}`;
+                        }
+                        else {
+                            alert('Não é possível ultrapassar o limite do estoque');
+                        }
+                    }
+                });
+            }
+            else if (tipoSpan === 'menos') {
+                pIds.forEach(e => {
+                    const index = e.getAttribute('data-index');
+                    if (e.getAttribute('id') === indexProduto) {
+                        if (produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho <= 1) {
+                            alert('Não é possível adicionar 0 para a quantidade de produtos');
+                        }
+                        else {
+                            produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho--;
+                            e.innerHTML = `${produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho}`;
+                        }
+                    }
+                });
+            }
+            atualizarTotalCusto();
+        }
+        function calcularTotalCusto() {
+            incremento = 0;
+            for (let i = 0; i < produtosAddCarrinho.length; i++) {
+                const total = produtosAddCarrinho[i].qnt_adicionada_carrinho * produtosAddCarrinho[i].custo;
+                console.log(total);
+                incremento += total;
+            }
+            return incremento;
+        }
+        function atualizarTotalCusto() {
+            const printCustoTotal = document.querySelector('.print-custo-total');
+            printCustoTotal.innerHTML = `<strong>R$ ${calcularTotalCusto().toFixed(2).replace('.', ',')}</strong>`;
+        }
+        function carregamentoDeDadosAdicionais() {
+            ballRed.innerHTML = `<p></p>`;
+            ballRed.innerHTML = `<p>${produtosAddCarrinho.length}</p>`;
+            if (produtosAddCarrinho.length > 0) {
+                ballRed.classList.add('ball');
+                shopCart.appendChild(ballRed);
+            }
+            else {
+                shopCart.removeChild(ballRed);
+            }
+            if (divGlobal.style.display === 'none') {
+                divGlobal.style.display = 'none';
+            }
+            else {
+                divGlobal.style.display = 'none';
+            }
+        }
+        function carregamentoCarrinho() {
+            const events = document.querySelector('.events');
+            events.style.display = 'block';
+            document.body.classList.add('pauseScroll');
+            events.innerHTML = `
+      <div class="div-event">
+      <l-hourglass
+        size="40"
+        bg-opacity="0.1"
+        speed="1.25"
+        color="black"
+      ></l-hourglass>
+      <p>Atualizando o carrinho, por favor aguarde...</p>
+      </div>
+    `;
+            setTimeout(() => {
+                if (events.style.display = 'block') {
+                    events.style.display = 'none';
+                    document.body.classList.remove('pauseScroll');
+                }
+            }, 3000);
+        }
+        function identificarItemParaRemover() {
+            const removeItem = document.querySelectorAll('#remove-item');
+            removeItem.forEach(item => {
+                item.addEventListener('click', () => {
+                    const index = item.getAttribute('data-item');
+                    console.log('remove', index);
+                    removerItem(Number(index));
+                });
+            });
+            function removerItem(index) {
+                produtosAddCarrinho[index].qnt_adicionada_carrinho = 0;
+                produtosAddCarrinho[index].estoque = produtosAddCarrinho[index].estoque_fixo;
+                produtosAddCarrinho.splice(index, 1);
+                carregamentoCarrinho();
+            }
+        }
+        identificarItemParaRemover();
+        function comprarItens() {
+            const checkout = document.querySelector('.checkout');
+            checkout.addEventListener('click', () => {
+                for (let i = 0; i < produtosAddCarrinho.length; i++) {
+                    produtosAddCarrinho[i].estoque_fixo = produtosAddCarrinho[i].qnt_adicionada_carrinho;
+                    const tipoProduto = produtosAddCarrinho[i].tipo;
+                    const idProduto = produtosAddCarrinho[i].id++;
+                    console.log(idProduto);
+                    switch (tipoProduto) {
+                        case 'roupa':
+                            roupas_produtos.roupas[idProduto - 20].estoque_fixo--;
+                            break;
+                        case 'bolsa':
+                            bolsas_produtos.bolsas[idProduto - 40].estoque_fixo--;
+                            break;
+                        case 'calcado':
+                            calcados_produtos.calcados[idProduto].estoque_fixo--;
+                            break;
+                    }
+                }
+                produtosAddCarrinho.splice(0, produtosAddCarrinho.length);
+                carregamentoCarrinho();
+                carregamentoDeDadosAdicionais();
+            });
+        }
+        comprarItens();
     }
 });

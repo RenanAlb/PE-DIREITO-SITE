@@ -1,35 +1,67 @@
 .carrinho {
   display: flex;
-  white-space: nowrap;
+  flex-direction: column;
   overflow-x: auto;
   width: 100%;
   margin: 70px 0px 0px 0px;
-  padding: 30px 0px;
+  padding: 30px 30px;
 }
 .center-p {
   text-align: center;
   margin: auto;
 }
 
-.carrinho::-webkit-scrollbar {
-  width: 8px;
-  height: 20px;
+.head-carrinho {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px 0px;
 }
-
-.carrinho::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-
-.carrinho::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border-radius: 6px;
-}
-
-.carrinho::-webkit-scrollbar-corner {
-  background-color: #f1f1f1;
-}
-
 .produto-add-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+}
+.mais-ou-menos {
+  display: flex;
+  align-items: center;
+}
+.mais-ou-menos span {
+  font-size: 2em;
+  margin: 0px 20px;
+  padding: 0px 5px;
+}
+.mais-ou-menos span:hover {
+  cursor: pointer;
+}
+.total {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.checkout {
+  border: none;
+  background-color: rgb(65, 65, 65);
+  margin-top: 10px;
+  padding: 10px 0px;
+  color: white;
+  font-size: 1.4em;
+  border-radius: 4px;
+}
+.checkout:hover {
+  background-color: black;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.custo {
+  position: absolute;
+  right: 70px;
+}
+
+/* .produto-add-carrinho {
   padding: 5px;
   border: 1px solid rgb(225, 225, 225);
 }
@@ -39,13 +71,17 @@
 .produto-add-carrinho p {
   font-size: 1.4em;
 }
+*/
+
+
 .global {
   position: fixed;
   background-color: rgb(255, 255, 255);
   width: 100%;
   right: 0;
-  top: 0;
-  height: 100vh;
+  top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
   align-items: center;
   justify-content: space-between;
   display: none;
@@ -67,4 +103,38 @@
 .ball p {
   font-size: 0.6em;
   color: white;
+}
+
+@media screen and (max-width: 538px) {
+  .custo {
+    left: 35px;
+    margin-top: 36px;
+    font-size: 0.7em;
+  }
+}
+
+
+.events {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.div-event {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.div-event p {
+  margin-top: 20px;
 }

@@ -1585,7 +1585,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 0,
+      id: 40,
       estoque_fixo: 2,
       tipo_produto: 'bolsa pequena'
     },
@@ -1600,7 +1600,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 1,
+      id: 41,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1615,7 +1615,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 2,
+      id: 42,
       estoque_fixo: 2,
       tipo_produto: 'bolsa pequena'
     },
@@ -1630,7 +1630,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 3,
+      id: 43,
       estoque_fixo: 2,
       tipo_produto: 'bolsa pequena'
     },
@@ -1645,7 +1645,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 4,
+      id: 44,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1660,7 +1660,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 5,
+      id: 45,
       estoque_fixo: 2,
       tipo_produto: 'bolsa pequena'
     },
@@ -1675,7 +1675,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 6,
+      id: 46,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1690,7 +1690,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 7,
+      id: 47,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1705,7 +1705,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 8,
+      id: 48,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1720,7 +1720,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 9,
+      id: 49,
       estoque_fixo: 2,
       tipo_produto: 'bolsa pequena'
     },
@@ -1735,7 +1735,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 10,
+      id: 50,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1750,7 +1750,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 11,
+      id: 51,
       estoque_fixo: 2,
       tipo_produto: 'bolsa pequena'
     },
@@ -1765,7 +1765,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 12,
+      id: 52,
       estoque_fixo: 2,
       tipo_produto: 'bolsa pequena'
     },
@@ -1780,7 +1780,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 13,
+      id: 53,
       estoque_fixo: 2,
       tipo_produto: 'bolsa pequena'
     },
@@ -1795,7 +1795,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 14,
+      id: 54,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1810,7 +1810,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 15,
+      id: 55,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1825,7 +1825,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 16,
+      id: 56,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1840,7 +1840,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 17,
+      id: 57,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1855,7 +1855,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 18,
+      id: 58,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
@@ -1870,7 +1870,7 @@ const bolsas_produtos: BolsasContent = {
       custo_total_qnt_comprada: 0,
       custo_total_qnt_adicionada_carrinho: 0,
       custo_total_itens: 0,
-      id: 19,
+      id: 59,
       estoque_fixo: 2,
       tipo_produto: 'bolsa grande'
     },
