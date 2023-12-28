@@ -638,6 +638,7 @@ shopCart.addEventListener('click', () => {
                 produtosAddCarrinho[index].estoque = produtosAddCarrinho[index].estoque_fixo;
                 produtosAddCarrinho.splice(index, 1);
                 carregamentoCarrinho();
+                carregamentoDeDadosAdicionais();
             }
         }
         identificarItemParaRemover();

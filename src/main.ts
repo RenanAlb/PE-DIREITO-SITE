@@ -713,6 +713,8 @@ shopCart.addEventListener('click', () => {
         produtosAddCarrinho.splice(index, 1)
 
         carregamentoCarrinho()
+
+        carregamentoDeDadosAdicionais()
       }
     }
     identificarItemParaRemover()
