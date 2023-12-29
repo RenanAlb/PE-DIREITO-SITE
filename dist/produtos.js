@@ -13,7 +13,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 20,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'vestido'
         },
         {
@@ -43,7 +43,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 22,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'macacão'
         },
         {
@@ -58,7 +58,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 23,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'vestido'
         },
         {
@@ -73,7 +73,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 24,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'vestido'
         },
         {
@@ -88,7 +88,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 25,
-            estoque_fixo: 2,
+            estoque_fixo: 1,
             tipo_produto: 'vestido'
         },
         {
@@ -103,7 +103,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 26,
-            estoque_fixo: 2,
+            estoque_fixo: 6,
             tipo_produto: 'vestido'
         },
         {
@@ -118,7 +118,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 27,
-            estoque_fixo: 2,
+            estoque_fixo: 7,
             tipo_produto: 'vestido'
         },
         {
@@ -133,7 +133,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 28,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'macacão'
         },
         {
@@ -148,7 +148,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 29,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'vestido'
         },
         {
@@ -163,7 +163,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 30,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'conjunto'
         },
         {
@@ -178,7 +178,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 31,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'biquini'
         },
         {
@@ -193,7 +193,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 32,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'chemise'
         },
         {
@@ -208,7 +208,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 33,
-            estoque_fixo: 2,
+            estoque_fixo: 6,
             tipo_produto: 'maiô'
         },
         {
@@ -223,7 +223,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 34,
-            estoque_fixo: 2,
+            estoque_fixo: 6,
             tipo_produto: 'chemise'
         },
         {
@@ -253,7 +253,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 36,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'vestido'
         },
         {
@@ -268,7 +268,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 37,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'macacão'
         },
         {
@@ -283,7 +283,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 38,
-            estoque_fixo: 2,
+            estoque_fixo: 7,
             tipo_produto: 'conjunto'
         },
         {
@@ -298,7 +298,7 @@ const roupas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 39,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'vestido'
         },
     ]
@@ -332,7 +332,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 1,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'rasteira anacapri'
         },
         {
@@ -347,7 +347,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 2,
-            estoque_fixo: 2,
+            estoque_fixo: 7,
             tipo_produto: 'sandália anacapri'
         },
         {
@@ -362,7 +362,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 3,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'sandália anacapri'
         },
         {
@@ -377,7 +377,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 4,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'chinelo anacapri'
         },
         {
@@ -392,7 +392,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 5,
-            estoque_fixo: 2,
+            estoque_fixo: 8,
             tipo_produto: 'sandália anacapri'
         },
         {
@@ -407,7 +407,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 6,
-            estoque_fixo: 2,
+            estoque_fixo: 9,
             tipo_produto: 'sapatilha anacapri'
         },
         {
@@ -422,7 +422,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 7,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'sapatilha anacapri'
         },
         {
@@ -437,7 +437,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 8,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'sandália anacapri'
         },
         {
@@ -452,7 +452,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 9,
-            estoque_fixo: 2,
+            estoque_fixo: 12,
             tipo_produto: 'rasteira anacapri'
         },
         {
@@ -467,7 +467,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 10,
-            estoque_fixo: 2,
+            estoque_fixo: 6,
             tipo_produto: 'rasteira anacapri'
         },
         {
@@ -482,7 +482,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 11,
-            estoque_fixo: 2,
+            estoque_fixo: 7,
             tipo_produto: 'sapatilha anacapri'
         },
         {
@@ -497,7 +497,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 12,
-            estoque_fixo: 2,
+            estoque_fixo: 9,
             tipo_produto: 'tênis anacapri'
         },
         {
@@ -512,7 +512,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 13,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'bota'
         },
         {
@@ -527,7 +527,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 14,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'tênis anacapri'
         },
         {
@@ -542,7 +542,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 15,
-            estoque_fixo: 2,
+            estoque_fixo: 6,
             tipo_produto: 'tênis anacapri'
         },
         {
@@ -572,7 +572,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 17,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'tênis'
         },
         {
@@ -587,7 +587,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 18,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'sandália'
         },
         {
@@ -602,7 +602,7 @@ const calcados_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 19,
-            estoque_fixo: 2,
+            estoque_fixo: 7,
             tipo_produto: 'tênis anacapri'
         },
     ]
@@ -621,7 +621,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 40,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'bolsa pequena'
         },
         {
@@ -651,7 +651,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 42,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'bolsa pequena'
         },
         {
@@ -666,7 +666,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 43,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'bolsa pequena'
         },
         {
@@ -681,7 +681,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 44,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -696,7 +696,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 45,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'bolsa pequena'
         },
         {
@@ -711,7 +711,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 46,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -741,7 +741,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 48,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -756,7 +756,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 49,
-            estoque_fixo: 2,
+            estoque_fixo: 6,
             tipo_produto: 'bolsa pequena'
         },
         {
@@ -771,7 +771,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 50,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -786,7 +786,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 51,
-            estoque_fixo: 2,
+            estoque_fixo: 6,
             tipo_produto: 'bolsa pequena'
         },
         {
@@ -801,7 +801,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 52,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'bolsa pequena'
         },
         {
@@ -831,7 +831,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 54,
-            estoque_fixo: 2,
+            estoque_fixo: 5,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -846,7 +846,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 55,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -861,7 +861,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 56,
-            estoque_fixo: 2,
+            estoque_fixo: 6,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -876,7 +876,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 57,
-            estoque_fixo: 2,
+            estoque_fixo: 3,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -891,7 +891,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 58,
-            estoque_fixo: 2,
+            estoque_fixo: 1,
             tipo_produto: 'bolsa grande'
         },
         {
@@ -906,7 +906,7 @@ const bolsas_produtos = {
             custo_total_qnt_adicionada_carrinho: 0,
             custo_total_itens: 0,
             id: 59,
-            estoque_fixo: 2,
+            estoque_fixo: 4,
             tipo_produto: 'bolsa grande'
         },
     ]
