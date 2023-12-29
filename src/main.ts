@@ -126,9 +126,6 @@ function controlesMenu() {
           <p>R$${array[i].custo.toFixed(2).replace('.',',')}</p>
           <button class="carrinho-produto" data-type="${array[i].tipo}" id="${array[i].id}">
             Adicionar ao carrinho
-          </button><br>
-          <button class="comprar-produto" id="${array[i].id}">
-            Comprar agora
           </button>
         </div>
       </div>
@@ -402,7 +399,7 @@ function roupasMain() {
       <div class="produto">
         <div class="bk-img-produto-${i}"></div>
         <div class="desc-produto">
-          <p>${roupas_produtos.roupas[i].nome}</p>
+          <p class="name-produto">${roupas_produtos.roupas[i].nome}</p>
           <p>R$${roupas_produtos.roupas[i].custo.toFixed(2).replace('.',',')}</p>
           <button class="carrinho-produto" data-type="${roupas_produtos.roupas[i].tipo}" id="${i}">
             Adicionar ao carrinho
@@ -433,7 +430,7 @@ function bolsasMain() {
       <div class="produto">
         <div class="bk-img-produto-${i}"></div>
         <div class="desc-produto">
-          <p>${bolsas_produtos.bolsas[i].nome}</p>
+          <p class="name-produto">${bolsas_produtos.bolsas[i].nome}</p>
           <p>R$${bolsas_produtos.bolsas[i].custo.toFixed(2).replace('.',',')}</p>
           <button class="carrinho-produto" data-type="${bolsas_produtos.bolsas[i].tipo}" id="${i}">
             Adicionar ao carrinho
@@ -462,7 +459,7 @@ function calcadosMain() {
       <div class="produto">
         <div class="bk-img-produto-${i}"></div>
         <div class="desc-produto">
-          <p>${calcados_produtos.calcados[i].nome}</p>
+          <p class="name-produto">${calcados_produtos.calcados[i].nome}</p>
           <p>R$${calcados_produtos.calcados[i].custo.toFixed(2).replace('.',',')}</p>
           <button class="carrinho-produto" data-type="${calcados_produtos.calcados[i].tipo}" id="${i}">
             Adicionar ao carrinho
@@ -528,7 +525,7 @@ function carrinho() {
         produtosAddCarrinho.push(produtoAdicionado)
         console.log('Produto adicionado ao carrinho:', produtosAddCarrinho)
       } else {
-        alert('Estoque esgotado!')
+        alert('Esgotado!')
       }
     } else {
       console.log('Produto existente: ', produtoExistente)
@@ -537,7 +534,7 @@ function carrinho() {
         produtoExistente.estoque--
         console.log('Produto existente atualizado:', produtosAddCarrinho)
       } else {
-        alert('Estoque esgotado!')
+        alert('Esgotado!')
       }
     }
     ballRed.innerHTML = `<p>${produtosAddCarrinho.length}</p>`
@@ -545,7 +542,7 @@ function carrinho() {
       ballRed.classList.add('ball')
       shopCart.appendChild(ballRed)
     } else {
-      shopCart.removeChild(ballRed)
+      console.log('Renan')
     }
   }
 }
@@ -567,25 +564,41 @@ shopCart.addEventListener('click', () => {
     carrinhoEl.innerHTML += `
       <div class="head-carrinho">
         <p>CARRINHO</p>
-        <p style="margin-left: 16px">QUANTIDADE</p>
+        <p style="margin-left: 44px">QUANTIDADE</p>
         <p>REMOVER</p>
       </div>
     `
     for (let i = 0; i < produtosAddCarrinho.length; i++) {
+      if (produtosAddCarrinho[i].qnt_adicionada_carrinho > produtosAddCarrinho[i].estoque_fixo) {
+        produtosAddCarrinho[i].qnt_adicionada_carrinho = 1
+      } else {
+        produtosAddCarrinho[i].qnt_adicionada_carrinho = produtosAddCarrinho[i].qnt_adicionada_carrinho
+      }
     carrinhoEl.innerHTML += `
       <div class="produto-add-carrinho">
-        <p>${produtosAddCarrinho[i].nome}</p>
+        <div class="mini-image-${i}"></div>
         <div class="mais-ou-menos">
           <span id="menos" class="event-span" data-spanid="${produtosAddCarrinho[i].id}">-</span>
-          <p class="p-id" data-index="${i}" id="${produtosAddCarrinho[i].id}">1</p>
+          <p class="p-id" data-index="${i}" id="${produtosAddCarrinho[i].id}">${produtosAddCarrinho[i].qnt_adicionada_carrinho}</p>
           <span id="mais" class="event-span" data-spanid="${produtosAddCarrinho[i].id}">+</span>
         </div>
-        <p class="custo">R$ 200,00</p>
+        <p class="custo">R$ ${produtosAddCarrinho[i].custo.toFixed(2).replace('.',',')}</p>
         <span id="remove-item" data-item="${i}" class="material-symbols-outlined">
           close
         </span>
       </div>
     `
+
+    divGlobal.appendChild(carrinhoEl)
+    menu.appendChild(divGlobal)
+
+    const miniImage = document.querySelector(`.mini-image-${i}`) as HTMLDivElement
+
+    miniImage.style.backgroundImage = `url(${produtosAddCarrinho[i].img})`
+    miniImage.style.width = '80px'
+    miniImage.style.height = '110px'
+    miniImage.style.backgroundSize = 'cover'
+    miniImage.style.backgroundPosition = 'center center'
     }
     let incremento: number =  0
     carrinhoEl.innerHTML += `
@@ -597,8 +610,6 @@ shopCart.addEventListener('click', () => {
     `
 
     console.log(carrinhoEl)
-    divGlobal.appendChild(carrinhoEl)
-    menu.appendChild(divGlobal)
 
     const spans = document.querySelectorAll('.event-span') as NodeListOf<HTMLSpanElement>
     console.log(spans)
@@ -618,8 +629,10 @@ shopCart.addEventListener('click', () => {
         pIds.forEach(e => {
           const index = e.getAttribute('data-index')
           if (e.getAttribute('id') === indexProduto) {
-            if (produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho !== produtosAddCarrinho[Number(index)].estoque_fixo) {
+            if (produtosAddCarrinho[Number(index)].estoque !== 0) {
               produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho++
+              produtosAddCarrinho[Number(index)].estoque--
+              console.log('qnt-adicionada-carrinho:', produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho, 'estoque:',produtosAddCarrinho[Number(index)].estoque)
               e.innerHTML = `${produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho}`
             } else {
               alert('Não é possível ultrapassar o limite do estoque')
@@ -631,9 +644,10 @@ shopCart.addEventListener('click', () => {
           const index = e.getAttribute('data-index')
           if (e.getAttribute('id') === indexProduto) {
             if (produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho <= 1) {
-              alert('Não é possível adicionar 0 para a quantidade de produtos')
+              alert('Não é possível adicionar 0 para a quantidade de produtos.\nClique no X para remover o produto.')
             } else {
               produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho--
+              produtosAddCarrinho[Number(index)].estoque++
               e.innerHTML = `${produtosAddCarrinho[Number(index)].qnt_adicionada_carrinho}`
             }
           }
@@ -688,14 +702,20 @@ shopCart.addEventListener('click', () => {
       ></l-hourglass>
       <p>Atualizando o carrinho, por favor aguarde...</p>
       </div>
-    `
+      `
 
+      function gerarNumeroAleatorio(): number {
+        return Math.floor((Math.random() * 5) + 1 ) * 1000
+      }
+
+      const numeroAleatorio = gerarNumeroAleatorio()
+      console.log(numeroAleatorio)
       setTimeout(() => {
         if (events.style.display = 'block') {
           events.style.display = 'none'
           document.body.classList.remove('pauseScroll')
         }
-      }, 3000)
+      }, numeroAleatorio)
     }
 
     function identificarItemParaRemover() {
@@ -725,7 +745,7 @@ shopCart.addEventListener('click', () => {
         for(let i = 0; i < produtosAddCarrinho.length; i++) {
           produtosAddCarrinho[i].estoque_fixo = produtosAddCarrinho[i].qnt_adicionada_carrinho
           const tipoProduto = produtosAddCarrinho[i].tipo
-          const idProduto = produtosAddCarrinho[i].id++
+          const idProduto = produtosAddCarrinho[i].id
           console.log(idProduto)
           switch(tipoProduto) {
             case 'roupa':
@@ -741,7 +761,6 @@ shopCart.addEventListener('click', () => {
         }
         produtosAddCarrinho.splice(0, produtosAddCarrinho.length)
         carregamentoCarrinho()
-
        carregamentoDeDadosAdicionais()
       })
     }
