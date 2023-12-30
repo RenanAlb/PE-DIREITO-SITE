@@ -186,9 +186,35 @@
   }
 }
 
+.ball-favoritos {
+  position: absolute;
+  background-color: red;
+  width: 14px;
+  height: 14px;
+  right: 145px;
+  top: 20px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 0.6em;
+  color: white;
+}
+
 @media screen and (max-width: 940px) {
   .nav-bar section ul li a {
     font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 470px) {
+  .contate-nos {
+    display: none;
+  }
+  .ball {
+    right: 77px;
+  }
+  .ball-favoritos {
+    right: 125px;
   }
 }
 @media screen and (max-width: 360px) {
@@ -205,13 +231,12 @@
     top: 22px;
     left: calc(100% - 100px);
   }
-}
-@media screen and (max-width: 470px) {
-  .contate-nos {
-    display: none;
-  }
-  .ball {
-    right: 77px;
+  .ball-favoritos {
+    top: 27px;
+    width: 14px;
+    padding: 9px;
+    right: 170px;
+    height: 14px;
   }
 }
 

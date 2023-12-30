@@ -30,6 +30,9 @@ header video {
   font-size: 2.5em;
   text-align: center;
 }
+.container .logo:hover {
+  cursor: pointer;
+}
 .part1-index {
   margin-top: 50px;
   text-align: center;
@@ -42,111 +45,78 @@ header video {
   background-image: url(../img/look1.jpg);
   background-position: center top;
   background-size: cover;
-  width: 50%;
-  height: 600px;
-}
-.part1-index .display-text {
-  width: 50%;
+  width: 100%;
   height: 600px;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   display: flex;
-  flex-direction: column;
 }
-.part1-index .display-text p {
-  font-size: 4em;
+.display-img p {
+  font-size: 2em;
   color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.display-img2 {
+  background-image: url(../img/calcado-anacapri.png);
+  width: 100%;
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+  justify-content: center;
+  align-items: end;
+  display: flex;
+}
+.display-img2 p {
+  font-size: 2em;
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.part1-index section {
+  width: 49.7%;
+}
+.part1-index section p {
+  background-color: rgba(255, 255, 255, 0.635);
 }
 
 .part2-index {
   margin-top: 10px;
 }
-.produtos-exibir {
-  display: flex;
-  flex-wrap: wrap;
-}
-.produtos-exibir .style-produto {
-  width: 50%;
-  height: 600px;
-  border: 1px solid rgb(205, 205, 205);
+.bk-img {
+  background-color: rgb(122, 122, 122);
+  background-image: url(../img/bolsa-victor-hugo.png), linear-gradient(to bottom, rgb(112, 112, 112), rgb(30, 30, 30));
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: center center;
+  width: 100%;
+  height: 700px;
   justify-content: center;
   align-items: center;
   display: flex;
-}
-.produtos-exibir .style-produto:hover {
-  cursor: pointer;
-}
-
-.img-bk1-p2 {
-  background-image: url(../img/bolsa16.jpg);
-  background-position: center center;
-  background-size: cover;
-  width: 350px;
-  height: 400px;
-  position: absolute;
-  z-index: -1;
-}
-.img-bk2-p2 {
-  background-image: url(../img/bolsa17.jpg);
-  background-position: center center;
-  background-size: cover;
-  width: 350px;
-  height: 400px;
-  position: absolute;
-  z-index: -1;
-}
-.img-bk3-p2 {
-  background-image: url(../img/bolsa6.jpg);
-  background-position: center center;
-  background-size: cover;
-  width: 350px;
-  height: 400px;
-  position: absolute;
-  z-index: -1;
-}
-.img-bk4-p2 {
-  background-image: url(../img/bolsa12.jpg);
-  background-position: center center;
-  background-size: cover;
-  width: 350px;
-  height: 400px;
-  position: absolute;
-  z-index: -1;
-}
-.sobre-style-produto {
+  flex-direction: column;
   text-align: center;
-  top: 230px;
-  bottom: 20px;
-  right: 0px;
-  margin-top: 480px;
 }
-.sobre-style-produto .view-more {
-  border: 1px solid transparent;
-  margin: 10px 0px;
-  background-color: transparent;
-  border-bottom: 1px solid black;
-  padding: 10px;
-  transition: 0.2s;
-}
-.sobre-style-produto .view-more:hover {
-  border: 1px solid black;
-  background-color: black;
+.bk-img p {
   color: white;
-  cursor: pointer;
-  transition: 0.5s;
+  font-size: 2.7em;
 }
-.view-look {
+.bk-img button {
   padding: 10px 20px;
-  border-radius: 30px;
-  background-color: rgb(0, 0, 0);
-  border: none;
-  color: white;
-  margin-top: 40px;
+  background-color: rgb(245, 245, 149);
+  color: black;
+  font-weight: bolder;
+  margin: 30px 0px;
+  border: 1px solid transparent;
 }
-.view-look:hover {
-  background-color: rgb(235, 213, 142);
-  color: rgb(0, 0, 0);
+.bk-img button:hover {
   cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
 }
 
 
@@ -160,15 +130,17 @@ header video {
     display: flex;
   }
 }
-@media screen and (max-width: 1234px) {
-  .part1-index .display-img {
+@media screen and (max-width: 1480px) {
+  .part1-index section {
     width: 100%;
+    margin: 3px 0px;
   }
-  .part1-index .display-text {
-    width: 100%;
+  .part1-index section p {
+    background-color: rgba(255, 255, 255, 0.635);
+    font-size: 1.2em;
   }
-  .part1-index .display-text p {
-    font-size: 3em;
+  .part2-index {
+    margin: 0;
   }
 }
 
@@ -199,6 +171,9 @@ header video {
   }
   .part2-index section h1 {
     font-size: 2.2em;
+  }
+  .bk-img p {
+    font-size: 1.6em;
   }
 }
 @media screen and (max-width: 840px) {
